@@ -1,0 +1,57 @@
+/* Element */
+
+body{
+    font-family: 'Times New Roman', Times, serif
+}
+
+h1 {
+    font-size: 38px;
+    margin: 4px;
+}
+
+h3 {
+    color: lightskyblue;
+    margin: 0 auto;
+}
+
+hr {
+    width: 70%;
+    margin: 0 auto;
+}
+
+p, li {
+    width: 70%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+li {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+/* Class */
+
+.italic {
+    font-style: italic;
+}
+
+/* ID */
+
+#content {
+    border: 1px solid #000;
+    max-width:50%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#text {
+    width: 75%;
+    margin: 0 auto;
+}
+
+#byuilogo {
+    width: 150px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
