@@ -36,6 +36,11 @@ li {
     font-style: italic;
 }
 
+.dark {
+    background-color: #121212;
+    color: white;
+}
+
 /* ID */
 
 #content {
