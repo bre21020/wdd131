@@ -42,8 +42,13 @@ nav a {
     border-top: 1px solid gray;
 }
 
+nav {
+    text-align: center;
+}
+
 .hide {
     display: none;
+    
 }
 
 nav a:hover {
@@ -94,10 +99,15 @@ footer {
 
     nav a {
         display: inline;
+        border-top: 0px solid black;
     }
 
     nav {
-        text-align: right;
+        text-align: center;
+    }
+
+    .hide {
+        display: inline;
     }
 
 }
