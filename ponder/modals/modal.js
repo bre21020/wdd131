@@ -9,7 +9,7 @@ const closeButton = modal.querySelector('.close-viewer');
 gallery.addEventListener('click', openModal);
 
 function openModal(e) {
-    console.log(e.target);
+    //console.log(e.target);
 
     const img = e.target;
     const src = img.getAttribute('src');
