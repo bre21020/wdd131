@@ -61,7 +61,7 @@ books.forEach(book => {
     `
     article.innerHTML = html;
     bookList.appendChild(article);
-    console.log(blog);
+    console.log(book);
 });
 
 console.log("all functions have been run");
