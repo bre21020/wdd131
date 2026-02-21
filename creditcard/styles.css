@@ -1,0 +1,95 @@
+body {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    /* min-height: 100vh; */
+}
+
+#card {
+    
+    max-width: 50%;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr 1fr;
+    /* background-color: lightgray; */
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.gray {
+    background-color: lightgray;
+    padding: 5px;
+}
+
+.white {
+    background-color: white;
+}
+
+.topLeft {
+    border-top-left-radius: 10px;
+}
+
+.topRight {
+    border-top-right-radius: 10px;
+}
+
+.bottomLeft {
+    border-bottom-left-radius: 10px;
+}
+
+.bottomRight {
+    border-bottom-right-radius: 10px;
+}
+
+
+
+#month, #year, #IDcvv {
+    width: 35%;
+}
+
+#cardExpiration {
+    display: flex;
+    align-items: center;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.rightEdge {
+    border-right: 1px solid black;
+    /* box-shadow: inset 2px 2px 5px rgba(0,0,0,0.2); */
+}
+
+.topEdge {
+    border-top: 1px solid black;
+}
+
+.leftEdge {
+    border-left: 1px solid black;
+}
+
+.bottomEdge {
+    border-bottom: 1px solid black;
+}
+
+.black {
+    background-color: black;
+}
+
+.cardEmoji {
+    font-size: 250%;
+}
+
+.submitButton {
+    margin: 15px;
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    border: solid black 4px;
+}
+
+.submitButton:hover{
+    border: solid gray 4px;
+    background-color: lightgray;
+}
