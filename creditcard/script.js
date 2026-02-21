@@ -39,7 +39,7 @@ function submitHandler(event) {
     }
     // Success: show a confirmation message
     //const formContainer = document.getElementById('checkoutForm');
-    document.getElementById('card').innerHTML = '<h2>Thank you for your purchase.</h2>';
+    document.getElementById('card').innerHTML = '<h2>Thank you for your purchase. i didnt like this one. Not enough practice offered in the video, we literally just pasted the code. The only thing I did was make the favicon, the rest of the script was pretty tough to understand, and I didnt feel like I had been prepared to handle the divs or the grid templates, so it made this assignment take many more hours than the other ones. I prefer when the learning material prepares me for the assignment.</h2>';
 }
 
 document.getElementById('IDsubmitButton').addEventListener('click', () => submitHandler());
