@@ -1,0 +1,1427 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+
+
+
+<style>
+.button {
+background-color: brown;
+border: thistle;
+color: white;
+padding: 128px 128px;
+px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin: 4px 4px;
+cursor: pointer;
+border-radius: 650px;
+}
+.button2 {
+background-color: #008CBA; /* Blue */
+border: none;
+color: white;
+padding: 12px 12px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin: 4px 4px;
+cursor: pointer;
+border-radius: 20px;
+width: 100%;
+}
+
+
+
+
+.button2:disable {
+background-color: #656565;
+}
+
+
+
+
+.button3 {
+background-color: #4343bf;
+border: none;
+color: white;
+padding: 16px 16px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 8px;
+margin: 4px 4px;
+cursor: pointer;
+border-radius: 20px;
+width: 100%;
+}
+
+
+
+
+.button4 {
+background-color: #000000;
+border: none;
+color: white;
+padding: 16px 16px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 8px;
+margin: 4px 4px;
+cursor: pointer;
+border-radius: 20px;
+width: 100%;
+}
+
+
+
+
+.shopButton {
+            background-color: #b5b5b5;
+            border-radius: 10px;
+            width: 100%;            
+}
+
+
+
+
+.shopbutton #image {
+            width: 50%;
+}
+
+
+
+
+.shopButton img {
+            height: 72px;
+            width: 72px;
+}
+
+
+
+
+.shopButton #nameAndCost {
+            margin: left;
+            width: 100%
+            
+}
+
+
+
+
+.shopButton #iNeedThisForThePStudyButton {
+            width: 10%;
+}
+
+
+
+
+.shopButton #amount {
+            font-size:48px;
+            width: 10%;
+}
+
+
+
+
+.mainInfo{
+            background-color: rgb(238, 238, 238, 0.8);
+}
+
+
+
+
+.buyButton{
+            float: left;
+}
+
+
+
+
+.buildingInfo{
+text-align: center
+font-size: 16px;
+background-color: rgb(238, 228, 238);
+}
+
+
+
+
+.buildingTables{
+background-color: rgb(238, 228, 238);
+user-select: none;
+}
+
+
+
+
+.goldButton {
+        background-color: #ffd700;
+}
+
+
+
+
+.unselectable {
+            user-select: none;
+}
+
+
+
+
+</style>
+</head>
+<body>
+
+
+
+
+<div class="mainInfo">
+            <center>
+<h1><span id="cookies">0</span> Testimonies</h1>
+<p>Testimonies Per Click <span id="perClick">1</span></p>
+<p>TPS: <span id="displayCPS">0</span></p>
+            </center>
+</div>
+
+
+
+
+<button onclick="saveGame()" class="button3">Save Game </button>
+<br><br>
+
+
+
+
+<div class="cookieContainer">
+            <center>
+            <br>
+            <img src="https://images-us-prod.cms.commerce.dynamics.com/cms/api/fswvqbgntk/imageFileData/search?fileName=/Products%2FPI100_000_001.png" onclick="cookieClicked()" width="256px" height="256px"></button>
+            <br>
+            </center>
+</div>
+
+
+
+
+<br>
+
+
+
+
+<div class="buildingTables">
+
+
+
+
+<table class="shopButton" onclick="pstudy()">
+            <tr>
+                    <td id="image"><img src="https://media.ldscdn.org/images/media-library/people/man-scripture-study-2089778-gallery.jpg"></td>
+                    <td id="nameAndCost">
+                            <p>Personal Study</p>
+                            <p><span id="studyRequirement">0</span></p>
+                    </td>
+                    <td id="iNeedThisForThePStudyButton"><span id="totalCookieClicks"></span></td>
+            <tr>
+</table>
+
+
+
+
+</div>
+<br>
+
+
+
+
+
+
+
+
+<div class="buildingTables">
+
+
+
+
+<table class="shopButton" onclick="buyCursor()">
+            <tr>
+                    <td id="image"><img src="https://assets.ldscdn.org/6e/3b/6e3b1377a7d6e50a9fa6a4b5b6d83f3a98fe21fa/missionary_dress_appearance_shirt_tie_haircut.png"></td>
+                    <td id="nameAndCost">
+                            <p>Missionaries</p>
+                            <p><span id="cursorCost">15</span></p>
+                    </td>
+                    <td id="amount"><span id="cursors">0</span></td>
+            <tr>
+</table>
+
+
+
+
+</div>
+<br>
+<div class="buildingTables">
+<table class="shopButton" onclick="buyGrandma()">
+            <tr>
+                    <td id="image"><img src="https://assets.churchofjesuschrist.org/8a/8c/8a8ced3dbcf9027083e58f8b0894bddc142c59df/8a8ced3dbcf9027083e58f8b0894bddc142c59df.png"></td>
+                    <td id="nameAndCost">
+                            <p>Mission Presidents</p>
+                            <p><span id="grandmaCost">100</span></p>
+                    </td>
+                    <td id="amount"><span id="grandmas">0</span></td>
+            <tr>
+</table>
+</div>
+<br>
+<div class="buildingTables">
+<table class="shopButton" onclick="buyFarm()">
+            <tr>
+                    <td id="image"><img src="https://newsroom.churchofjesuschrist.org/media/orig/Large-Smith-Cabin.jpg"></td>
+                    <td id="nameAndCost">
+                            <p>Branches</p>
+                            <p><span id="farmCost">1100</span></p>
+                    </td>
+                    <td id="amount"><span id="farms">0</span></td>
+            <tr>
+</table>
+</div>
+<br>
+<div class="buildingTables">
+
+
+
+
+<table class="shopButton" onclick="buyMine()">
+            <tr>
+                    <td id="image"><img src="https://assets.churchofjesuschrist.org/36/c4/36c4fc865bb8764efc1eb06fc05b7d3c4f7b92b5/lds_church_chapel.jpeg"></td>
+                    <td id="nameAndCost">
+                            <p>Wards</p>
+                            <p><span id="mineCost">120000</span></p>
+                    </td>
+                    <td id="amount"><span id="mines">0</span></td>
+            <tr>
+</table>
+
+
+
+
+</div>
+<br>
+<div class="buildingTables">
+
+
+
+
+<table class="shopButton" onclick="buyFactory()">
+            <tr>
+                    <td id="image"><img src="https://assets.churchofjesuschrist.org/6c/68/6c6817bb0e2fba04ebf1a5222dabb3d6fa0a83f5/caldwell_idaho_stake_center.jpeg"></td>
+                    <td id="nameAndCost">
+                            <p>Stakes</p>
+                            <p><span id="factoryCost">1300000</span></p>
+                    </td>
+                    <td id="amount"><span id="factories">0</span></td>
+            <tr>
+</table>
+
+
+
+
+</div>
+<br>
+<div class="buildingTables">
+
+
+
+
+<table class="shopButton" onclick="buyBank()">
+            <tr>
+                    <td id="image"><img src="https://newsroom.churchofjesuschrist.org/media/960x540/FHC_Interior.jpg"></td>
+                    <td id="nameAndCost">
+                            <p>Family History Centers</p>
+                            <p><span id="bankCost">15</span></p>
+                    </td>
+                    <td id="amount"><span id="banks">0</span></td>
+            <tr>
+</table>
+
+
+
+
+</div>
+<br>
+<div class="buildingTables">
+
+
+
+
+<table class="shopButton" onclick="buyTemple()">
+            <tr>
+                    <td id="image"><img src="https://assets.churchofjesuschrist.org/4a1e9a1a942b7d35841453df7b3d8df5f41d2303.jpeg"></td>
+                    <td id="nameAndCost">
+                            <p>Temples</p>
+                            <p><span id="templeCost">20000000</span></p>
+                    </td>
+                    <td id="amount"><span id="temples">0</span></td>
+            <tr>
+</table>
+
+
+
+
+</div>
+<br>
+<div class="buildingTables">
+
+
+
+
+<table class="shopButton" onclick="buyWizard()">
+            <tr>
+                    <td id="image"><img src="https://assets.churchofjesuschrist.org/b4/0d/b40d78ed0ef95920734e502e740863339563d46b/conference_center.jpeg"></td>
+                    <td id="nameAndCost">
+                            <p>Conference Centers</p>
+                            <p><span id="wizardCost">330000000</span></p>
+                    </td>
+                    <td id="amount"><span id="wizards">0</span></td>
+            <tr>
+</table>
+
+
+
+
+</div>
+<br>
+<div class="buildingTables">
+
+
+
+
+<table class="shopButton" onclick="buyShip()">
+            <tr>
+                    <td id="image"><img src="https://news-ca.churchofjesuschrist.org/media/960x540/WSC-Wilkinson-Center1.jpg"></td>
+                    <td id="nameAndCost">
+                            <p>BYU's</p>
+                            <p><span id="shipCost">5100000000</span></p>
+                    </td>
+                    <td id="amount"><span id="ships">0</span></td>
+            <tr>
+</table>
+
+
+
+
+</div>
+<br>
+<div class="buildingTables">
+
+
+
+
+<table class="shopButton" onclick="buyLab()">
+            <tr>
+                    <td id="image"><img src="https://assets.churchofjesuschrist.org/c0/c1/c0c1c3f10837d28a1bec2d0097bc9a53d0ccfc16/faith_articles_lds.jpeg"></td>
+                    <td id="nameAndCost">
+                            <p>Articles of Faith</p>
+                            <p><span id="labCost">75 billion</span></p>
+                    </td>
+                    <td id="amount"><span id="labs">0</span></td>
+            <tr>
+</table>
+
+
+
+
+</div>
+
+
+
+
+<br>
+
+
+
+
+<div class="buildingTables">
+
+
+
+
+<table class="shopButton" onclick="buyPortal()">
+            <tr>
+                    <td id="image"><img src="https://www.churchofjesuschrist.org/bc/content/ldsorg/church/news/2018/05/18/350-Front-Cover-SAINTS.jpg"></td>
+                    <td id="nameAndCost">
+                            <p>Church History Books</p>
+                            <p><span id="portalCost">1000000000000</span></p>
+                    </td>
+                    <td id="amount"><span id="portals">0</span></td>
+            <tr>
+</table>
+
+
+
+
+</div>
+
+
+
+
+<br><br><br><br>
+
+
+
+
+<div class="buildingInfo">
+<center><h1>Building Info</h1></center>
+              <h3>Missionaries</h3>
+             <p>Count: <span id="totalCursors"></span></p>
+            <p>Total TPS: <span id="cursorPower"></span></p>
+              <p>Individual TPS: <span id="cursorICPS"></span></p>
+<br>
+              <h3>Mission Presidents</h3>
+              <p>Count: <span id="totalGrandmas"></span></p>
+                <p>TPS: <span id="grandmaPower"></span></p>
+              <p>Individual TPS: <span id="grandmaICPS"></span></p>
+<br>
+              <h3>Branches</h3>
+              <p>Count: <span id="totalFarms"></span></p>
+                <p>TPS: <span id="farmPower"></span></p>
+              <p>Individual TPS: <span id="farmICPS"></span></p>
+<br>
+             <h3>Wards</h3>
+              <p>Count: <span id="totalMines"></span></p>
+              <p>TPS: <span id="minePower"></span></p>
+              <p>Individual TPS: <span id="mineICPS"></span></p>
+<br>
+              <h3>Stakes</h3>
+              <p>Count: <span id="totalFactories"></span></p>
+              <p>TPS: <span id="factoryPower"></span></p>
+              <p>Individual TPS: <span id="factoryICPS"></span></p>
+<br>
+              <h3>Family History Centers</h3>
+              <p>Count: <span id="totalBanks"></span></p>
+              <p>TPS: <span id="bankPower"></span></p>
+              <p>Individual TPS: <span id="bankICPS"></span></p>
+<br>
+              <h3>Temples</h3>
+              <p>Count: <span id="totalTemples"></span></p>
+              <p>TPS: <span id="templePower"></span></p>
+              <p>Individual TPS: <span id="templeICPS"></span></p>
+<br>
+              <h3>Conference Centers</h3>
+              <p>Count: <span id="totalWizards"></span></p>
+              <p>TPS: <span id="wizardPower"></span></p>
+              <p>Individual TPS: <span id="wizardICPS"></span></p>
+<br>
+              <h3>BYU's</h3>
+              <p>Count: <span id="totalShips"></span></p>
+              <p>TPS: <span id="shipPower"></span></p>
+              <p>Individual TPS: <span id="shipICPS"></span></p>
+<br>
+<h3>Articles of Faith</h3>
+              <p>Count: <span id="totalLabs"></span></p>
+              <p>TPS: <span id="labPower"></span></p>
+              <p>Individual TPS: <span id="labICPS"></span></p>
+<br>
+              <h3>Church History Books</h3>
+             <p>Count: <span id="totalPortals"></span></p>
+            <p>Total TPS: <span id="portalPower"></span></p>
+              <p>Individual TPS: <span id="portalICPS"></span></p>
+<br>
+
+
+
+
+<center><h1>Other Stats</h1></center>
+<p>Total Testimonies All Time: <span id="totalCookies"></span> </p>
+<p>Testimonies Made From Clicking: <span id="handmadeCookies">0</span> </p>
+
+
+
+
+<h3> How Much You'll Have In:</h3>
+<p>1 Minute: <span id="1minuteCookies"></span> </p>
+<p>5 Minutes: <span id="5minuteCookies"></span> </p>
+<p>10 Minutes: <span id="10minuteCookies"></span> </p>
+<p>15 Minutes: <span id="15minuteCookies"></span> </p>
+<p>30 Minutes: <span id="30minuteCookies"></span> </p>
+<p>1 Hour: <span id="1hourCookies"></span> </p>
+<p>6 Hours: <span id="6hourCookies"></span> </p>
+<p>24 Hours: <span id="24hourCookies"></span> </p>
+</div>
+
+
+
+
+<script>
+
+
+
+
+!function(i,n){"object"==typeof exports&&"object"==typeof module?module.exports=n(require("decimal.js")):"function"==typeof define&&define.amd?define(["decimal.js"],n):"object"==typeof exports?exports.numberformat=n(require("decimal.js")):i.numberformat=n(i["decimal.js"])}(this,function(i){return function(i){function n(l){if(t[l])return t[l].exports;var o=t[l]={exports:{},id:l,loaded:!1};return i[l].call(o.exports,o,o.exports,n),o.loaded=!0,o.exports}var t={};return n.m=i,n.c=t,n.p="",n(0)}([function(i,n,t){(function(i){"use strict";function l(i){return i&&i.__esModule?i:{default:i}}function o(i,n){if(!(i instanceof n))throw new TypeError("Cannot call a class as a function")}function r(i,n){if(!i)throw new Error(n);return i}function e(i,n){var t=r(v[n.backend],"not a backend: "+n.backend);i=t.normalize(i,n);var l=t.index(i),o=n.suffixFn(l);if(Math.abs(i)<n.minSuffix)return Math.abs(i)>=n.minRound&&(i=Math.floor(i)),i.toLocaleString(void 0,{maximumSignificantDigits:n.sigfigs});if(!o&&""!==o)return i.toExponential(n.sigfigs-1).replace("e+","e");var e=t.prefix(i,l,n);return""+e+o}Object.defineProperty(n,"__esModule",{value:!0}),n.formatShort=n.formatFull=n.format=n.Formatter=n.Formats=void 0;var a=Object.assign||function(i){for(var n=1;n<arguments.length;n++){var t=arguments[n];for(var l in t)Object.prototype.hasOwnProperty.call(t,l)&&(i[l]=t[l])}return i},u=function(){function i(i,n){for(var t=0;t<n.length;t++){var l=n[t];l.enumerable=l.enumerable||!1,l.configurable=!0,"value"in l&&(l.writable=!0),Object.defineProperty(i,l.key,l)}}return function(n,t,l){return t&&i(n.prototype,t),l&&i(n,l),n}}(),d=t(1),s=l(d),g=t(2),f=l(g),c=function(){return Math.log10?Math.log10:function(i){var n=Math.log(i)/Math.LN10;return n=Math.round(1e6*n)/1e6}}(),v={native:{normalize:function(i){return i},index:function(i){return Math.max(0,Math.floor(c(Math.abs(i))/3))},prefix:function(i,n,t){var l=t.sigfigs;return(i/Math.pow(1e3,n)).toPrecision(l)}},"decimal.js":{_requireDecimal:function(n){var l=void 0;return l=i.window&&window.Decimal?window.Decimal:t(3),l.clone(n)},normalize:function(i,n){var t=n.rounding,l=this._requireDecimal({rounding:t});return new l(i)},index:function(i){var n=this._requireDecimal();return i=new n(i),Math.floor(i.e/3)},prefix:function(i,n,t){var l=t.sigfigs,o=t.rounding,r=this._requireDecimal({rounding:o}),e=new r(1e3).pow(n);return new r(i).dividedBy(e).toPrecision(l)}}},p={backend:"native",flavor:"full",suffixGroup:"full",suffixFn:function(i){var n=this.suffixes||this.suffixGroups[this.suffixGroup];if(r(n,"no such suffixgroup: "+this.suffixGroup),i<n.length)return n[i]||""},minSuffix:1e5,minRound:0,sigfigs:3,format:"standard"},q=n.Formats={standard:{suffixGroups:s.default},longScale:{suffixGroups:f.default},scientific:{suffixGroups:{full:[],short:[]}},hybrid:{suffixGroups:{full:s.default.full.slice(0,12),short:s.default.short.slice(0,12)}},engineering:{suffixFn:function(i){return 0===i?"":"E"+3*i}}},m={full:{suffixGroup:"full",sigfigs:5},short:{suffixGroup:"short",sigfigs:3}};p.formats=q,p.flavors=m;var x=n.Formatter=function(){function i(){var n=this,t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};o(this,i),this.opts=t;for(var l=Object.keys(this._normalizeOpts().flavors),r=0;r<l.length;r++)!function(i){var t=l[i],o="format"+t.charAt(0).toUpperCase()+t.substr(1);n[o]=function(i,l){return n.formatFlavor(i,t,l)}}(r)}return u(i,[{key:"_normalizeOpts",value:function(){var i=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};i=a({},this.opts,i);var n=i&&i.format,t=i&&i.formats||p.formats,l=t[n||p.format];r(l,"no such format: "+n);var o=i&&i.flavor,e=i&&i.flavors||p.flavors,u=e[o||p.flavor];return r(u,"no such flavor: "+o),a({},p,l,u,i)}},{key:"index",value:function(i,n){return n=this._normalizeOpts(n),v[n.backend].index(i)}},{key:"suffix",value:function(i,n){n=this._normalizeOpts(n);var t=v[n.backend].index(i);return n.suffixFn(t)}},{key:"format",value:function(i,n){return n=this._normalizeOpts(n),e(i,n)}},{key:"formatFlavor",value:function(i,n,t){return this.format(i,a({},t,{flavor:n}))}},{key:"listFormats",value:function(i){return i=this._normalizeOpts(i),Object.keys(i.formats)}}]),i}(),D=new x;D.defaultOptions=p,D.Formatter=x,n.default=D;n.format=function(i,n){return D.format(i,n)},n.formatFull=function(i,n){return D.formatFlavor(i,"full",n)},n.formatShort=function(i,n){return D.formatFlavor(i,"short",n)}}).call(n,function(){return this}())},function(i,n){i.exports={short:["","K","M","B","T","Qa","Qi","Sx","Sp","Oc","No","Dc","UDc","DDc","TDc","QaDc","QiDc","SxDc","SpDc","ODc","NDc","Vi","UVi","DVi","TVi","QaVi","QiVi","SxVi","SpVi","OVi","NVi","Tg","UTg","DTg","TTg","QaTg","QiTg","SxTg","SpTg","OTg","NTg","Qd","UQd","DQd","TQd","QaQd","QiQd","SxQd","SpQd","OQd","NQd","Qq","UQq","DQq","TQq","QaQq","QiQq","SxQq","SpQq","OQq","NQq","Sg","USg","DSg","TSg","QaSg","QiSg","SxSg","SpSg","OSg","NSg","St","USt","DSt","TSt","QaSt","QiSt","SxSt","SpSt","OSt","NSt","Og","UOg","DOg","TOg","QaOg","QiOg","SxOg","SpOg","OOg","NOg"],full:[""," thousand"," million"," billion"," trillion"," quadrillion"," quintillion"," sextillion"," septillion"," octillion"," nonillion"," decillion"," undecillion"," duodecillion"," tredecillion"," quattuordecillion"," quinquadecillion"," sedecillion"," septendecillion"," octodecillion"," novendecillion"," vigintillion"," unvigintillion"," duovigintillion"," tresvigintillion"," quattuorvigintillion"," quinquavigintillion"," sesvigintillion"," septemvigintillion"," octovigintillion"," novemvigintillion"," trigintillion"," untrigintillion"," duotrigintillion"," trestrigintillion"," quattuortrigintillion"," quinquatrigintillion"," sestrigintillion"," septentrigintillion"," octotrigintillion"," noventrigintillion"," quadragintillion"," unquadragintillion"," duoquadragintillion"," tresquadragintillion"," quattuorquadragintillion"," quinquaquadragintillion"," sesquadragintillion"," septenquadragintillion"," octoquadragintillion"," novenquadragintillion"," quinquagintillion"," unquinquagintillion"," duoquinquagintillion"," tresquinquagintillion"," quattuorquinquagintillion"," quinquaquinquagintillion"," sesquinquagintillion"," septenquinquagintillion"," octoquinquagintillion"," novenquinquagintillion"," sexagintillion"," unsexagintillion"," duosexagintillion"," tresexagintillion"," quattuorsexagintillion"," quinquasexagintillion"," sesexagintillion"," septensexagintillion"," octosexagintillion"," novensexagintillion"," septuagintillion"," unseptuagintillion"," duoseptuagintillion"," treseptuagintillion"," quattuorseptuagintillion"," quinquaseptuagintillion"," seseptuagintillion"," septenseptuagintillion"," octoseptuagintillion"," novenseptuagintillion"," octogintillion"," unoctogintillion"," duooctogintillion"]}},function(i,n){i.exports={short:["","K","M","Md","B","Bd","T","Td","Qa","Qad","Qi","Qid","Sx","Sxd","Sp","Spd","Oc","Od","No","Nd","Dc","Dd","UDc","UDd","DDc","DDd","TDc","TDd","QaDc","QaDd","QiDc","QiDd","SxDc","SxDd","SpDc","SpDd","ODc","ODd","NDc","NDd","Vi","Vd","UVi","UVd","DVi","DVd","TVi","TVd","QaVi","QaVd","QiVi","QiVd","SxVi","SxVd","SpVi","SpVd","OVi","OVd","NVi","NVd","Tg","TD","UTg","UTD","DTg","DTD","TTg","TTD","QaTg","QaTD","QiTg","QiTD","SxTg","SxTD","SpTg","SpTD","OTg","OTD","NTg","NTD","Qd","QD","UQd","UQD","DQd","DQD","TQd","TQD","QaQd","QaQD"],full:[""," thousand"," million"," milliard"," billion"," billiard"," trillion"," trilliard"," quadrillion"," quadrilliard"," quintillion"," quintilliard"," sextillion"," sextilliard"," septillion"," septilliard"," octillion"," octilliard"," nonillion"," nonilliard"," decillion"," decilliard"," undecillion"," undecilliard"," duodecillion"," duodecilliard"," tredecillion"," tredecilliard"," quattuordecillion"," quattuordecilliard"," quinquadecillion"," quinquadecilliard"," sedecillion"," sedecilliard"," septendecillion"," septendecilliard"," octodecillion"," octodecilliard"," novendecillion"," novendecilliard"," vigintillion"," vigintilliard"," unvigintillion"," unvigintilliard"," duovigintillion"," duovigintilliard"," tresvigintillion"," tresvigintilliard"," quattuorvigintillion"," quattuorvigintilliard"," quinquavigintillion"," quinquavigintilliard"," sesvigintillion"," sesvigintilliard"," septemvigintillion"," septemvigintilliard"," octovigintillion"," octovigintilliard"," novemvigintillion"," novemvigintilliard"," trigintillion"," trigintilliard"," untrigintillion"," untrigintilliard"," duotrigintillion"," duotrigintilliard"," trestrigintillion"," trestrigintilliard"," quattuortrigintillion"," quattuortrigintilliard"," quinquatrigintillion"," quinquatrigintilliard"," sestrigintillion"," sestrigintilliard"," septentrigintillion"," septentrigintilliard"," octotrigintillion"," octotrigintilliard"," noventrigintillion"," noventrigintilliard"," quadragintillion"," quadragintilliard"," unquadragintillion"," unquadragintilliard"]}},function(n,t){n.exports=i}])});
+//# sourceMappingURL=swarm-numberformat.min.js.map
+
+
+
+
+// P Studies
+
+
+
+
+var studyRequirement = 1000;
+
+
+
+
+function pstudy () {
+
+
+
+
+
+
+
+
+
+
+
+
+if (totalCookieClicks >= studyRequirement) {
+
+
+cookiesPerClick ++;
+cookieCount = cookieCount + (cookiesPerSecond * 600);
+totalCookieClicks -= 1000;
+
+
+
+
+document.getElementById("totalCookieClicks").innerHTML = numberformat.format (totalCookiesClicks);
+
+
+
+
+document.getElementById("perClick").innerHTML = numberformat.format (cookiesPerClick);
+
+
+
+
+}
+}
+
+
+
+
+// Cursors ------------------------
+
+
+
+
+var cursors = 0; //how many cursors you have
+var cursorPower = (0.1*10)/10; //cps of each cursor
+var cursorCost = 15; //how much each cursor costs to buy
+var cursorCPS = 0; //how much this building is contributing to the overall cps
+
+
+
+
+function buyCursor () {
+
+
+
+
+            if (cookieCount >= cursorCost) {
+
+
+
+
+        cursors = cursors+1;
+        cookieCount = ((cookieCount*10)- (cursorCost*10))/10;
+        cursorCost = Math.round(cursorCost *1.15);
+        document.getElementById("cookies").innerHTML = numberformat.format (cookieCount);
+            }
+}
+
+
+
+
+function upgradeCursor () {
+        cursorPower = cursorPower * 2;
+}
+
+
+
+
+// Grandmas ------------------------
+
+
+
+
+var grandmas = 0;
+var grandmaPower = 1; //cps of each grandma
+var grandmaCost = 100; //how much each grandma costs to buy
+
+
+
+
+function buyGrandma () {
+        if (cookieCount >= grandmaCost) {
+
+
+
+
+        grandmas = grandmas+1;
+        cookieCount = ((cookieCount*10)- (grandmaCost*10))/10;
+        grandmaCost = Math.round(grandmaCost *1.15);
+            
+        document.getElementById("cookies").innerHTML = numberformat.format (cookieCount);
+            }
+}
+
+
+
+
+// Farms --------------------------
+
+
+
+
+var farms = 0;
+var farmPower = 8; //cps of each farm
+var farmCost = 1100; //how much each farm costs to buy
+
+
+
+
+function buyFarm() {
+            if (cookieCount >= farmCost) {
+
+
+
+
+        farms = farms+1;
+        cookieCount = ((cookieCount*10)- (farmCost*10))/10;
+        farmCost = Math.round(farmCost *1.15);
+
+
+
+
+document.getElementById("cookies").innerHTML = numberformat.format (cookieCount);
+            
+            }
+}
+
+
+
+
+// Mines ------------------------
+
+
+
+
+var mines = 0;
+var minePower = 47; //cps of each mine
+var mineCost = 12000; //how much each mine costs to buy
+
+
+
+
+function buyMine () {
+            if (cookieCount >= mineCost) {
+
+
+
+
+        mines = mines+1;
+        cookieCount = ((cookieCount*10)- (mineCost*10))/10;
+        mineCost = Math.round(mineCost *1.15);
+
+
+
+
+document.getElementById("cookies").innerHTML = numberformat.format (cookieCount);
+            
+            }
+}
+
+
+
+
+// Factories ------------------------
+
+
+
+
+var factories = 0;
+var factoryPower = 260; //cps of each factory
+var factoryCost = 130000; //how much each factory costs to buy
+
+
+
+
+function buyFactory () {
+if (cookieCount >= factoryCost) {
+
+
+
+
+        factories = factories+1;
+        cookieCount = ((cookieCount*10)- (factoryCost*10))/10;
+        factoryCost = Math.round(factoryCost *1.15);
+            
+document.getElementById("cookies").innerHTML = numberformat.format (cookieCount);
+            }
+}
+// Banks ------------------------
+
+
+
+
+var banks = 0;
+var bankPower = 1400; //cps of each bank
+var bankCost = 1400000; //how much each bank costs to buy
+
+
+
+
+function buyBank () {
+   if (cookieCount >= bankCost) {
+
+
+
+
+        banks = banks+1;
+        cookieCount = ((cookieCount*10)- (bankCost*10))/10;
+        bankCost = Math.round(bankCost *1.15);
+
+
+
+
+document.getElementById("cookies").innerHTML = numberformat.format (cookieCount);
+            }
+}
+
+
+
+
+// Temples ------------------------
+
+
+
+
+var temples = 0;
+var templePower = 7800; //cps of each temple
+var templeCost = 20000000; //how much each temple costs to buy
+
+
+
+
+function buyTemple () {
+        if (cookieCount >= templeCost) {
+
+
+
+
+        temples = temples+1;
+        cookieCount = ((cookieCount*10)- (templeCost*10))/10;
+        templeCost = Math.round(templeCost *1.15);
+            
+document.getElementById("cookies").innerHTML = numberformat.format (cookieCount);
+            }
+}
+
+
+
+
+// Wizard Towers ------------------------
+
+
+
+
+var wizards = 0;
+var wizardPower = 44000; //cps of each wizard tower
+var wizardCost = 330000000; //how much each wizard tower costs to buy
+
+
+
+
+function buyWizard () {
+        if (cookieCount >= wizardCost) {
+
+
+
+
+        wizards = wizards+1;
+        cookieCount = ((cookieCount*10)- (wizardCost*10))/10;
+        wizardCost = Math.round(wizardCost *1.15);
+            
+document.getElementById("cookies").innerHTML = numberformat.format (cookieCount);
+            }
+}
+// Shipments ------------------------
+
+
+
+
+var ships = 0;
+var shipPower = 260000; //cps of each shipment
+var shipCost = 5100000000; //how much each shipment costs to buy
+
+
+
+
+function buyShip () {
+            if (cookieCount >= shipCost) {
+
+
+
+
+        ships = ships+1;
+        cookieCount = ((cookieCount*10)- (shipCost*10))/10;
+        shipCost = Math.round(shipCost *1.15);
+
+
+
+
+document.getElementById("cookies").innerHTML = numberformat.format (cookieCount);
+            }
+}
+
+
+
+
+//Alchemy Labs
+
+
+
+
+var labs = 0;
+var labPower = 1600000; //cps of each shipment
+var labCost = 75000000000; //how much each shipment costs to buy
+
+
+
+
+function buyLab () {
+            if (cookieCount >= labCost) {
+
+
+
+
+        labs = labs+1;
+        cookieCount = ((cookieCount*10)- (labCost*10))/10;
+        labCost = Math.round(labCost *1.15);
+
+
+
+
+document.getElementById("cookies").innerHTML = numberformat.format (cookieCount);
+            }
+}
+// portal 
+
+
+
+
+var portals = 0;
+var portalPower = 10000000; //cps of each shipment
+var portalCost = 1000000000000; //how much each shipment costs to buy
+
+
+
+
+function buyPortal () {
+            if (cookieCount >= labCost) {
+
+
+
+
+        portals = portals+1;
+        cookieCount = ((cookieCount*10)- (portalCost*10))/10;
+        portalCost = Math.round(portalCost *1.15);
+
+
+
+
+document.getElementById("cookies").innerHTML = numberformat.format (cookieCount);
+            }
+}
+
+
+
+
+//game function variables ----------
+
+
+
+
+var cookieCount = 0;
+var cookiesPerClick = 1;
+var cookiesPerSecond = 0;
+var totalCookieClicks = 0;
+var totalCookies =0;
+var handmadeCookies = 0;
+
+
+
+
+//cookie production output functions
+
+
+
+
+function cookieClicked () {
+        cookieCount = cookieCount+cookiesPerClick;
+        totalCookieClicks += 1;
+        totalCookies += cookiesPerClick;
+handmadeCookies = handmadeCookies + cookiesPerClick;
+        document.getElementById("cookies").innerHTML = numberformat.format (cookieCount);
+document.getElementById("handmadeCookies").innerHTML = numberformat.format (handmadeCookies);
+
+
+
+
+}
+
+
+
+
+//game running functions
+
+
+
+
+function update() {
+
+
+
+
+updateCPS();
+documentEverything();
+document.title = numberformat.format (cookieCount) + " Cookies - Cookie Clicker";
+
+
+
+
+}
+
+
+
+
+function CPS() {
+   cookieCount = ((cookieCount * 10) + (cookiesPerSecond * 10))/10;
+   totalCookies = ((totalCookies*10) + (cookiesPerSecond*10))/10;
+}
+
+
+
+
+function updateCPS() { cookiesPerSecond = (((cursors*10)*(cursorPower*10))/100) + (grandmas*grandmaPower) + (farms * farmPower) + (mines * minePower) + (factories * factoryPower) + (banks * bankPower) + (temples * templePower) + (wizards * wizardPower) + (ships * shipPower) + (labs * labPower) + (portals * portalPower);
+
+
+
+
+if (cookiesPerSecond < 1000) {
+document.getElementById("displayCPS").innerHTML = cookiesPerSecond;
+
+
+
+
+} else {
+document.getElementById("displayCPS").innerHTML = numberformat.format (cookiesPerSecond);
+}
+
+
+
+
+}
+
+
+
+
+function saveGame () {
+              var gameSave = {
+                        cookieCount: cookieCount,
+                        cookiesPerClick: cookiesPerClick,
+                        cookiesPerSecond: cookiesPerSecond,
+                        totalCookieClicks: totalCookieClicks,
+                        totalCookies: totalCookies,
+studyRequirement: studyRequirement,
+handmadeCookies: handmadeCookies,
+
+
+
+
+                        cursors: cursors,
+                        cursorPower: cursorPower,
+                        cursorCost: cursorCost,
+
+
+
+
+                        grandmas: grandmas,
+                        grandmaPower: grandmaPower,
+                        grandmaCost: grandmaCost,
+
+
+
+
+                        farms: farms,
+                        farmPower: farmPower,
+                        farmCost: farmCost,
+
+
+
+
+                        mines: mines,
+                        minePower: minePower,
+                        mineCost: mineCost,
+
+
+
+
+                        factories: factories,
+                        factoryPower: factoryPower,
+                        factoryCost: factoryCost,
+
+
+
+
+                        banks: banks,
+                        bankPower: bankPower,
+                        bankCost: bankCost,
+                                            
+                        temples: temples,
+                        templePower: templePower,
+                        templeCost: templeCost,
+
+
+
+
+                        wizards: wizards,
+                        wizardPower: wizardPower,
+                        wizardCost: wizardCost,
+
+
+
+
+                        ships: ships,
+                        shipPower: shipPower,
+                        shipCost: shipCost,
+
+
+
+
+labs: labs,
+                        labPower: labPower,
+                        labCost: labCost,
+
+
+
+
+                        portal: portals,
+                        portalPower: portalPower,
+                        portalCost: portalCost
+
+
+
+
+              };
+              localStorage.setItem("gameSave", JSON.stringify(gameSave));
+}
+
+
+
+
+function resetGame() {
+              if (confirm("Press OK to reset your game. You're an idiot if you do this, but you have your agency. Please ensure that you don't have this game running in any other tabs, or the reset may fail.")) {
+                        var gameSave = {};
+                        localStorage.removeItem('gameSave');
+                        location.reload();
+              }
+}
+
+
+
+
+function loadGame() {
+              var savedGame = JSON.parse(localStorage.getItem("gameSave"));
+
+
+
+
+              if (typeof savedGame.cookieCount !== "undefined") cookieCount = savedGame.cookieCount;
+              if (typeof savedGame.cookiesPerClick !== "undefined") cookiesPerClick = savedGame.cookiesPerClick;
+              if (typeof savedGame.cookiesPerSecond !== "undefined") cookiesPerSecond = savedGame.cookiesPerSecond;
+              if (typeof savedGame.totalCookieClicks !== "undefined") totalCookieClicks = savedGame.totalCookieClicks;
+              if (typeof savedGame.totalCookies !== "undefined") totalCookies = savedGame.totalCookies;
+if (typeof savedGame.studyRequirement !== "undefined") studyRequirement = savedGame.studyRequirement;
+if (typeof savedGame.handmadeCookies !== "undefined") handmadeCookies = savedGame.handmadeCookies;
+
+
+
+
+
+
+
+
+              if (typeof savedGame.cursors !== "undefined") cursors = savedGame.cursors;
+              if (typeof savedGame.cursorPower !== "undefined") cursorPower = savedGame.cursorPower;
+              if (typeof savedGame.cursorCost !== "undefined") cursorCost = savedGame.cursorCost;
+
+
+
+
+              if (typeof savedGame.grandmas !== "undefined") grandmas = savedGame.grandmas;
+              if (typeof savedGame.grandmaPower !== "undefined") grandmaPower = savedGame.grandmaPower;
+              if (typeof savedGame.grandmaCost !== "undefined") grandmaCost = savedGame.grandmaCost;
+
+
+
+
+              if (typeof savedGame.farms !== "undefined") farms = savedGame.farms;
+              if (typeof savedGame.farmPower !== "undefined") farmPower = savedGame.farmPower;
+              if (typeof savedGame.farmCost !== "undefined") farmCost = savedGame.farmCost;
+
+
+
+
+              if (typeof savedGame.mines !== "undefined") mines = savedGame.mines;
+              if (typeof savedGame.minePower !== "undefined") minePower = savedGame.minePower;
+              if (typeof savedGame.mineCost !== "undefined") mineCost = savedGame.mineCost;
+                      
+              if (typeof savedGame.factories !== "undefined") factories = savedGame.factories;
+              if (typeof savedGame.factoryPower !== "undefined") factoryPower = savedGame.factoryPower;
+              if (typeof savedGame.factoryCost !== "undefined") factoryCost = savedGame.factoryCost;
+
+
+
+
+              if (typeof savedGame.banks !== "undefined") banks = savedGame.banks;
+              if (typeof savedGame.bankPower !== "undefined") bankPower = savedGame.bankPower;
+              if (typeof savedGame.bankCost !== "undefined") bankCost = savedGame.bankCost;
+
+
+
+
+                      if (typeof savedGame.temples !== "undefined") temples = savedGame.temples;
+              if (typeof savedGame.templePower !== "undefined") templePower = savedGame.templePower;
+              if (typeof savedGame.templeCost !== "undefined") templeCost = savedGame.templeCost;
+
+
+
+
+              if (typeof savedGame.wizards !== "undefined") wizards = savedGame.wizards;
+              if (typeof savedGame.wizardPower !== "undefined") wizardPower = savedGame.wizardPower;
+              if (typeof savedGame.wizardCost !== "undefined") wizardCost = savedGame.wizardCost;
+
+
+
+
+              if (typeof savedGame.ships !== "undefined") ships = savedGame.ships;
+              if (typeof savedGame.shipPower !== "undefined") shipPower = savedGame.shipPower;
+              if (typeof savedGame.shipCost !== "undefined") shipCost = savedGame.shipCost;
+
+
+
+
+ if (typeof savedGame.labs !== "undefined") labs = savedGame.labs;
+              if (typeof savedGame.labPower !== "undefined") labPower = savedGame.labPower;
+              if (typeof savedGame.labCost !== "undefined") labCost = savedGame.labCost;
+
+
+
+
+ if (typeof savedGame.portals !== "undefined") labs = savedGame.portals;
+              if (typeof savedGame.portalPower !== "undefined") portalPower = savedGame.portalPower;
+              if (typeof savedGame.labCost !== "undefined") portalCost = savedGame.portalCost;
+
+
+
+
+}
+
+
+
+
+function documentEverything () {
+
+
+
+
+document.getElementById("cookies").innerHTML = numberformat.format (cookieCount);
+document.getElementById("perClick").innerHTML = cookiesPerClick;
+document.getElementById("totalCookieClicks").innerHTML = numberformat.format (totalCookieClicks);
+document.getElementById("totalCookies").innerHTML = numberformat.format (totalCookies);
+document.getElementById("studyRequirement").innerHTML = numberformat.format (studyRequirement);
+document.getElementById("handmadeCookies").innerHTML = numberformat.format (handmadeCookies);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.getElementById("1minuteCookies").innerHTML = numberformat.format (cookieCount + (cookiesPerSecond * 60));
+document.getElementById("5minuteCookies").innerHTML = numberformat.format (cookieCount + (cookiesPerSecond * 300));
+document.getElementById("10minuteCookies").innerHTML = numberformat.format (cookieCount + (cookiesPerSecond * 600));
+document.getElementById("15minuteCookies").innerHTML = numberformat.format (cookieCount + (cookiesPerSecond * 900));
+document.getElementById("30minuteCookies").innerHTML = numberformat.format (cookieCount + (cookiesPerSecond * 1800));
+document.getElementById("1hourCookies").innerHTML = numberformat.format (cookieCount + (cookiesPerSecond * 3600));
+document.getElementById("6hourCookies").innerHTML = numberformat.format (cookieCount + (cookiesPerSecond * 21600));
+document.getElementById("24hourCookies").innerHTML = numberformat.format (cookieCount + (cookiesPerSecond * 86400));
+
+
+
+
+document.getElementById("cursorCost").innerHTML = numberformat.format (cursorCost);
+document.getElementById("cursors").innerHTML = cursors;
+document.getElementById("cursorPower").innerHTML = numberformat.format (((cursors*10)*(cursorPower*10)/100));
+document.getElementById("totalCursors").innerHTML = cursors;
+document.getElementById("cursorICPS").innerHTML = cursorPower;
+
+
+
+
+document.getElementById("grandmas").innerHTML = grandmas;
+document.getElementById("grandmaCost").innerHTML = numberformat.format (grandmaCost);
+document.getElementById("grandmaPower").innerHTML = numberformat.format (grandmas*grandmaPower);
+document.getElementById("totalGrandmas").innerHTML = grandmas;
+document.getElementById("grandmaICPS").innerHTML = numberformat.format (grandmaPower);
+
+
+
+
+document.getElementById("farms").innerHTML = farms;
+document.getElementById("farmCost").innerHTML = numberformat.format (farmCost);
+document.getElementById("farmPower").innerHTML = numberformat.format (farms*farmPower);
+document.getElementById("totalFarms").innerHTML = farms;
+document.getElementById("cursorICPS").innerHTML = cursorPower;
+document.getElementById("farmICPS").innerHTML = numberformat.format (farmPower);
+
+
+
+
+document.getElementById("mines").innerHTML = mines;
+document.getElementById("mineCost").innerHTML = numberformat.format (mineCost);
+document.getElementById("minePower").innerHTML = numberformat.format (mines*minePower);
+document.getElementById("totalMines").innerHTML = mines;
+document.getElementById("mineICPS").innerHTML = numberformat.format (minePower);
+
+
+
+
+document.getElementById("factories").innerHTML = factories;
+document.getElementById("factoryCost").innerHTML = numberformat.format (factoryCost);
+document.getElementById("factoryPower").innerHTML = numberformat.format (factories*factoryPower);
+document.getElementById("totalFactories").innerHTML = factories;
+document.getElementById("factoryICPS").innerHTML = numberformat.format (factoryPower);
+
+
+
+
+document.getElementById("banks").innerHTML = banks;
+document.getElementById("bankCost").innerHTML = numberformat.format (bankCost);
+document.getElementById("bankPower").innerHTML = numberformat.format (banks*bankPower);
+document.getElementById("totalBanks").innerHTML = banks;
+document.getElementById("bankICPS").innerHTML = numberformat.format (bankPower);
+
+
+
+
+document.getElementById("temples").innerHTML = temples;
+document.getElementById("templeCost").innerHTML = numberformat.format (templeCost);
+document.getElementById("templePower").innerHTML = numberformat.format (temples*templePower);
+document.getElementById("totalTemples").innerHTML = temples;
+document.getElementById("templeICPS").innerHTML = numberformat.format (templePower);
+
+
+
+
+document.getElementById("wizards").innerHTML = wizards;
+document.getElementById("wizardCost").innerHTML = numberformat.format (wizardCost);
+document.getElementById("wizardPower").innerHTML = numberformat.format (wizards*wizardPower);
+document.getElementById("totalWizards").innerHTML = wizards;
+document.getElementById("wizardICPS").innerHTML = numberformat.format (wizardPower);
+
+
+
+
+document.getElementById("ships").innerHTML = ships;
+document.getElementById("shipCost").innerHTML = numberformat.format (shipCost);
+document.getElementById("shipPower").innerHTML = numberformat.format (ships*shipPower);
+document.getElementById("totalShips").innerHTML = ships;
+document.getElementById("shipICPS").innerHTML = numberformat.format (shipPower);
+
+
+
+
+document.getElementById("labs").innerHTML = labs;
+document.getElementById("labCost").innerHTML = numberformat.format (labCost);
+document.getElementById("labPower").innerHTML = numberformat.format (labs*labPower);
+document.getElementById("totalLabs").innerHTML = labs;
+document.getElementById("labICPS").innerHTML = numberformat.format (labPower);
+
+
+
+
+document.getElementById("portals").innerHTML = portals;
+document.getElementById("portalCost").innerHTML = numberformat.format (portalCost);
+document.getElementById("portalPower").innerHTML = numberformat.format (portals*portalPower);
+document.getElementById("totalPortals").innerHTML = portals;
+document.getElementById("portalICPS").innerHTML = numberformat.format (portalPower);
+}
+
+
+
+
+window.onload = function () {
+              loadGame();
+}
+
+
+
+
+setInterval(update, 50)
+setInterval(CPS, 1000)
+
+
+
+
+setInterval (function() {
+            saveGame();
+}, 60000);
+
+
+
+
+</script>
+
+
+
+
+<button onclick="resetGame()" class="button4">Reset Game</button>
+
+
+
+
+</body>
+</html>
