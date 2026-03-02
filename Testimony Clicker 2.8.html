@@ -1,0 +1,580 @@
+﻿<!DOCTYPE html>
+<html>
+        <head>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+                <link rel="icon" href="https://newsroom.churchofjesuschrist.org/media/960x540/book-of-mormon.jpg">
+                <style>
+                        .button3 {
+                                background-color: #4343bf;
+                                border: none;
+                                color: white;
+                                padding: 16px 16px;
+                                text-align: center;
+                                text-decoration: none;
+                                display: inline-block;
+                                font-size: 12px;
+                                margin: 4px 4px;
+                                cursor: pointer;
+                                border-radius: 20px;
+                                width: 100%;
+                                box-shadow: 0px 5px 15px 0.25px gray;
+                        }
+                        .button4 {
+                                background-color: #000000;
+                                border: none;
+                                color: white;
+                                padding: 16px 16px;
+                                text-align: center;
+                                text-decoration: none;
+                                display: inline-block;
+                                font-size: 12px;
+                                margin: 4px 4px;
+                                cursor: pointer;
+                                border-radius: 20px;
+                                width: 100%;
+                                box-shadow: 0px 0px 25px 5px gray;
+                        }
+                        .shopButton {
+                                background-color: #b5b5b5;
+                                border-radius: 10px;
+                                width: 100%;            
+                        }
+                        .shopbutton #IDimage {
+                                width: 50%;
+                        }
+                        .shopButton img {
+                                height: 72px;
+                                width: 72px;
+                        }
+                        .shopButton #IDnameAndCost {
+                                margin: left;
+                                width: 100%
+            
+                        }
+                        .shopButton #IDpStudyButton {
+                                width: 10%;
+                        }
+                        .shopButton #amount {
+                                font-size:48px;
+                                width: 10%;
+                        }
+                        .mainInfo {
+                                background-color: rgb(238, 238, 238, 0.8);
+                                border-radius: 15px;
+                                box-shadow: 0px 5px 15px 0.25px gray;
+                        }
+                        .buyButton {
+                                float: left;
+                        }
+                        .CLASSbuildingInfo {
+                                font-size: 16px;
+                                background-color: rgb(238, 228, 238);
+                                text-align: left;
+                                border-radius: 15px;
+                                box-shadow: 0px 15px 15px 0.25px gray;
+                                padding: 5px;
+                        }
+                        .CLASSbuildingTables {
+                                user-select: none;
+                                box-shadow: 0px 10px 15px 0.25px gray;
+                                border-radius: 10px;
+                                background-color: transparent;
+                                overflow: hidden;
+                        }
+                        .goldButton {
+                                background-color: #ffd700;
+                        }
+                        .unselectable {
+                                user-select: none;
+                        }
+                        .CLASSdisable {
+                                background-color: #4e4e4e;
+                        }
+                        main {
+                                max-width: 525px;
+                                background-color: transparent;
+                        }
+                        body {
+                                background: linear-gradient(to right, gray 0%, white 20%, white 80%, gray 100%)
+                        }
+                        .bomContainer img {
+                                border-radius: 15px;
+                                box-shadow: 0px 15px 15px 0.25px gray;
+                        }
+                        .CLASSbuildingImg img{
+                                border-radius: 8px;
+                        }
+                        @media (min-width: 550px) {
+                                main {
+                                        align-items: center;
+                                        border-radius: 15px;
+                                }
+                        }
+                </style>
+        </head>
+        <center>
+        <main>
+        <body>
+                <div class="mainInfo">
+                        <center>
+                                <h1><span id="IDtestimonyCounter">0</span> Testimonies</h1>
+                                <p>Testimonies Per Click <span id="IDtestimoniesPerClick">1</span></p>
+                                <p>TPS: <span id="IDdisplayTPS">0</span></p>
+                        </center>
+                </div> <br>
+                <button onclick="saveGame()" class="button3">Save Game </button>
+                <br><br>
+                <div class="bomContainer">
+                        <center>
+                        <br>
+                        <img src="https://images-us-prod.cms.commerce.dynamics.com/cms/api/fswvqbgntk/imageFileData/search?fileName=/Products%2FPI100_000_001.png" onclick="bomClicked()" width="256px" height="256px"></button>
+                        <br>
+                        </center>
+                </div>
+                <br><br>
+                <div class="CLASSbuildingTables">
+                        <table class="shopButton" onclick="pstudy()">
+                                <tr>
+                                        <td id="IDimage" class="CLASSbuildingImg"><img src="https://media.ldscdn.org/images/media-library/people/man-scripture-study-2089778-gallery.jpg"></td>
+                                        <td id="IDnameAndCost">
+                                                <p>Personal Study</p>
+                                                <p><span id="IDstudyRequirement">0</span></p>
+                                        </td>
+                                        <td id="IDpStudyButton"><span id="IDtotalBomClicks"></span></td>
+                                <tr>
+                        </table>
+                </div>
+                <br><br>
+                <div>
+                        <section id="IDbuildingList">
+
+                        </section>
+                
+                <br><br><br><br>
+                
+                <div class="CLASSbuildingInfo">
+                        <center><h1>Building Info</h1></center>
+                        <section id="IDbuildingInfoList">
+
+                        </section>
+                        <center><h1>Other Stats</h1></center>
+                                <p>Total Testimonies All Time: <span id="IDtotalTestimonies"></span> </p>
+                                <p>Testimonies Made From Clicking: <span id="IDhandmadeTestimonies">0</span> </p>
+                        <h3> How Much You'll Have In:</h3>
+                                <p>1 Minute: <span id="ID1minuteTestimonies"></span> </p>
+                                <p>5 Minutes: <span id="ID5minuteTestimonies"></span> </p>
+                                <p>10 Minutes: <span id="ID10minuteTestimonies"></span> </p>
+                                <p>15 Minutes: <span id="ID15minuteTestimonies"></span> </p>
+                                <p>30 Minutes: <span id="ID30minuteTestimonies"></span> </p>
+                                <p>1 Hour: <span id="ID1hourTestimonies"></span> </p>
+                                <p>6 Hours: <span id="ID6hourTestimonies"></span> </p>
+                                <p>24 Hours: <span id="ID24hourTestimonies"></span> </p>
+                                <br>
+                </div>
+                <br><br><br><br><br><br><br><br><br>
+                <button onclick="resetGame()" class="button4">Reset Game</button>
+                <br><br><br><br><br><br><br><br><br>
+                <script>
+
+                
+
+                const buildingsArray = [
+	                {
+		                id: 1,
+                                name: "missionary",
+		                numberOfBuildings: 0,
+                                IDnumberOfBuildings: "IDmissionary",
+                                IDinfoNumberOfBuildings: "IDinfoMissionary",
+                                tps: 0.1,
+                                IDtotalTps: "IDtotalTpsMissionary",
+                                IDtps: "IDtpsMissionary",
+                                cost: 15,
+                                overallTPS: 0,
+                                imgSRC: "https://assets.ldscdn.org/6e/3b/6e3b1377a7d6e50a9fa6a4b5b6d83f3a98fe21fa/missionary_dress_appearance_shirt_tie_haircut.png",
+                                displayName: "Missionaries",
+                                buyBuilding: buyBuilding
+                        },
+	                {
+		                id: 2,
+                                name: "mission_president",
+		                numberOfBuildings: 0,
+                                IDnumberOfBuildings: "IDmissionPresident",
+                                IDinfoNumberOfBuildings: "IDinfoMissionPresident",
+                                tps: 1,
+                                IDtotalTps: "IDtotalTpsMissionPresident",
+                                IDtps: "IDtpsMissionPresident",
+                                cost: 100,
+                                overallTPS: 0,
+                                imgSRC: "https://assets.churchofjesuschrist.org/8a/8c/8a8ced3dbcf9027083e58f8b0894bddc142c59df/8a8ced3dbcf9027083e58f8b0894bddc142c59df.png",
+                                displayName: "Mission Presidents",
+                                buyBuilding: buyBuilding
+	                },
+	                {
+		                id: 3,
+                                name: "branch",
+		                numberOfBuildings: 0,
+                                IDnumberOfBuildings: "IDbranch",
+                                IDinfoNumberOfBuildings: "IDinfoBranch",
+                                tps: 8,
+                                IDtotalTps: "IDtotalTpsBranch",
+                                IDtps: "IDtpsBranch",
+                                cost: 1100,
+                                overallTPS: 0,
+                                imgSRC: "https://newsroom.churchofjesuschrist.org/media/orig/Large-Smith-Cabin.jpg",
+                                displayName: "Branches",
+                                buyBuilding: buyBuilding
+	                },
+	                {
+		                id: 4,
+                                name: "ward",
+		                numberOfBuildings: 0,
+                                IDnumberOfBuildings: "IDward",
+                                IDinfoNumberOfBuildings: "IDinfoWard",
+                                tps: 47,
+                                IDtotalTps: "IDtotalTpsWard",
+                                IDtps: "IDtpsWard",
+                                cost: 12000,
+                                overallTPS: 0,
+                                imgSRC: "https://assets.churchofjesuschrist.org/36/c4/36c4fc865bb8764efc1eb06fc05b7d3c4f7b92b5/lds_church_chapel.jpeg",
+                                displayName: "Wards",
+                                buyBuilding: buyBuilding
+	                },
+	                {
+		                id: 5,
+                                name: "stake",
+		                numberOfBuildings: 0,
+                                IDnumberOfBuildings: "IDstake",
+                                IDinfoNumberOfBuildings: "IDinfoStake",
+                                tps: 260,
+                                IDtotalTps: "IDtotalTpsStake",
+                                IDtps: "IDtpsStake",
+                                cost: 130000,
+                                overallTPS: 0,
+                                imgSRC: "https://assets.churchofjesuschrist.org/6c/68/6c6817bb0e2fba04ebf1a5222dabb3d6fa0a83f5/caldwell_idaho_stake_center.jpeg",
+                                displayName: "Stakes",
+                                buyBuilding: buyBuilding
+	                },
+	                {
+		                id: 6,
+                                name: "familyHistoryCenter",
+		                numberOfBuildings: 0,
+                                IDnumberOfBuildings: "IDfamilyHistoryCenter",
+                                IDinfoNumberOfBuildings: "IDinfoFamilyHistoryCenter",
+                                tps: 1400,
+                                IDtotalTps: "IDtotalTpsFamilyHistoryCenter",
+                                IDtps: "IDtpsFamilyHistoryCenter",
+                                cost: 1400000,
+                                overallTPS: 0,
+                                imgSRC: "https://newsroom.churchofjesuschrist.org/media/960x540/FHC_Interior.jpg",
+                                displayName: "Family History Centers",
+                                buyBuilding: buyBuilding
+	                },
+	                {
+		                id: 7,
+                                name: "temple",
+		                numberOfBuildings: 0,
+                                IDnumberOfBuildings: "IDtemple",
+                                IDinfoNumberOfBuildings: "IDinfoTemple",
+                                tps: 7800,
+                                IDtotalTps: "IDtotalTpsTemple",
+                                IDtps: "IDtpsTemple",
+                                cost: 20000000,
+                                overallTPS: 0,
+                                imgSRC: "https://assets.churchofjesuschrist.org/4a1e9a1a942b7d35841453df7b3d8df5f41d2303.jpeg",
+                                displayName: "Temples",
+                                buyBuilding: buyBuilding
+	                },
+	                {
+		                id: 8,
+                                name: "conferenceCenter",
+		                numberOfBuildings: 0,
+                                IDnumberOfBuildings: "IDnconferenceCenter",
+                                IDinfoNumberOfBuildings: "IDinfoConferenceCenter",
+                                tps: 44000,
+                                IDtotalTps: "IDtotalTpsConferenceCenter",
+                                IDtps: "IDtpsConferenceCenter",
+                                cost: 330000000,
+                                overallTPS: 0,
+                                imgSRC: "https://assets.churchofjesuschrist.org/b4/0d/b40d78ed0ef95920734e502e740863339563d46b/conference_center.jpeg",
+                                displayName: "Conference Centers",
+                                buyBuilding: buyBuilding
+	                },
+	                {
+		                id: 9,
+                                name: "byu",
+		                numberOfBuildings: 0,
+                                IDnumberOfBuildings: "IDbyu",
+                                IDinfoNumberOfBuildings: "IDinfoByu",
+                                tps: 260000,
+                                IDtotalTps: "IDtotalTpsByu",
+                                IDtps: "IDtpsByu",
+                                cost: 5100000000,
+                                overallTPS: 0,
+                                imgSRC: "https://news-ca.churchofjesuschrist.org/media/960x540/WSC-Wilkinson-Center1.jpg",
+                                displayName: "BYU's",
+                                buyBuilding: buyBuilding
+	                },
+	                {
+		                id: 10,
+                                name: "articleOfFaith",
+		                numberOfBuildings: 0,
+                                IDnumberOfBuildings: "IDarticleOfFaith",
+                                IDinfoNumberOfBuildings: "IDinfoArticleOfFaith",
+                                tps: 1600000,
+                                IDtotalTps: "IDtotalTpsArticleOfFaith",
+                                IDtps: "IDtpsArticleOfFaith",
+                                cost: 75000000000,
+                                overallTPS: 0,
+                                imgSRC: "https://assets.churchofjesuschrist.org/c0/c1/c0c1c3f10837d28a1bec2d0097bc9a53d0ccfc16/faith_articles_lds.jpeg",
+                                displayName: "Articles of Faith",
+                                buyBuilding: buyBuilding
+	                },
+	                {
+		                id: 11,
+                                name: "historyBook",
+		                numberOfBuildings: 0,
+                                IDnumberOfBuildings: "IDhistoryBook",
+                                IDinfoNumberOfBuildings: "IDinfoHistoryBook",
+                                tps: 10000000,
+                                IDtotalTps: "IDtotalTpsHistoryBook",
+                                IDtps: "IDtpsHistoryBook",
+                                cost: 1000000000000,
+                                overallTPS: 0,
+                                imgSRC: "https://www.churchofjesuschrist.org/bc/content/ldsorg/church/news/2018/05/18/350-Front-Cover-SAINTS.jpg",
+                                displayName: "Church History Books",
+                                buyBuilding: buyBuilding
+	                },
+	                {
+		                id: 12,
+                                name: "magazine",
+		                numberOfBuildings: 0,
+                                IDnumberOfBuildings: "IDmagazine",
+                                IDinfoNumberOfBuildings: "IDinfoMagazine",
+                                tps: 65000000,
+                                IDtotalTps: "IDtotalTpsMagazine",
+                                IDtps: "IDtpsMagazine",
+                                cost: 14000000000000,
+                                overallTPS: 0,
+                                imgSRC: "https://assets.ldscdn.org/1e/5c/1e5c41ac766c84d9202e0ae51a4d65d42b4e57c9/april_2018_liahona_magazine_mormon.png",
+                                displayName: "Magazines",
+                                buyBuilding: buyBuilding
+	                }
+	                
+                ];
+
+                function buyBuilding () {
+                        if (testimonyCount >= this.cost) {
+                                this.numberOfBuildings ++;
+                                testimonyCount = ((testimonyCount*10)- (this.cost*10))/10;
+                                this.cost = Math.round(this.cost *1.15);
+                                document.getElementById(this.name).innerHTML = numberformat.format(this.cost);
+                                document.getElementById(this.IDnumberOfBuildings).innerHTML = this.numberOfBuildings;
+                                console.log("you bought " + this.name);
+                        }
+                        //console.log("IT WORKS! You clicked " + this.name);
+                        
+                }
+
+                const buildingList = document.getElementById('IDbuildingList');
+                const buildingInfoList = document.getElementById('IDbuildingInfoList');
+
+                // onclick="${building.buyBuilding()}"
+
+                buildingsArray.forEach(building => {
+                        const buildingButton = document.createElement('div');
+                        buildingButton.className = 'class_building';
+                        let buttonHTML=  `
+                                <div class="CLASSbuildingTables">
+                                        <table id=${building.id} class="shopButton " >
+                                                <tr>
+                                                        <td id="IDimage" class="CLASSbuildingImg"><img src="${building.imgSRC}"></td>
+                                                        <td id="IDnameAndCost">
+                                                                <p>${building.displayName}</p>
+                                                                <p><span id="${building.name}">${building.cost}</span></p>
+                                                        </td>
+                                                        <td id="amount"><span id="${building.IDnumberOfBuildings}">0</span></td>
+                                                </tr>
+                                        </table>
+                                </div>
+                                <br><br>
+                        `
+                        buildingButton.innerHTML = buttonHTML;
+                        buildingList.appendChild(buildingButton);
+                        buildingButton.querySelector('.shopButton').addEventListener('click', function () {
+                                building.buyBuilding();
+                        });
+                });
+
+                buildingsArray.forEach(building => {
+                        const buildingInfoCell = document.createElement('div');
+                        buildingInfoCell.className = 'class-info';
+                        let infoCellHTML = `
+                                <h3>${building.displayName}</h3>
+                                <p>Count: <span id="${building.IDinfoNumberOfBuildings}"> </span></p>
+                                <p>Total TPS: <span id="${building.IDtotalTps}"> </span></p>
+                                <p>Individual TPS: <span id="${building.IDtps}"></span></p>
+                                <br>
+                        `
+                        buildingInfoCell.innerHTML = infoCellHTML;
+                        buildingInfoList.appendChild(buildingInfoCell);
+                })
+                        
+                !function(i,n){"object"==typeof exports&&"object"==typeof module?module.exports=n(require("decimal.js")):"function"==typeof define&&define.amd?define(["decimal.js"],n):"object"==typeof exports?exports.numberformat=n(require("decimal.js")):i.numberformat=n(i["decimal.js"])}(this,function(i){return function(i){function n(l){if(t[l])return t[l].exports;var o=t[l]={exports:{},id:l,loaded:!1};return i[l].call(o.exports,o,o.exports,n),o.loaded=!0,o.exports}var t={};return n.m=i,n.c=t,n.p="",n(0)}([function(i,n,t){(function(i){"use strict";function l(i){return i&&i.__esModule?i:{default:i}}function o(i,n){if(!(i instanceof n))throw new TypeError("Cannot call a class as a function")}function r(i,n){if(!i)throw new Error(n);return i}function e(i,n){var t=r(v[n.backend],"not a backend: "+n.backend);i=t.normalize(i,n);var l=t.index(i),o=n.suffixFn(l);if(Math.abs(i)<n.minSuffix)return Math.abs(i)>=n.minRound&&(i=Math.floor(i)),i.toLocaleString(void 0,{maximumSignificantDigits:n.sigfigs});if(!o&&""!==o)return i.toExponential(n.sigfigs-1).replace("e+","e");var e=t.prefix(i,l,n);return""+e+o}Object.defineProperty(n,"__esModule",{value:!0}),n.formatShort=n.formatFull=n.format=n.Formatter=n.Formats=void 0;var a=Object.assign||function(i){for(var n=1;n<arguments.length;n++){var t=arguments[n];for(var l in t)Object.prototype.hasOwnProperty.call(t,l)&&(i[l]=t[l])}return i},u=function(){function i(i,n){for(var t=0;t<n.length;t++){var l=n[t];l.enumerable=l.enumerable||!1,l.configurable=!0,"value"in l&&(l.writable=!0),Object.defineProperty(i,l.key,l)}}return function(n,t,l){return t&&i(n.prototype,t),l&&i(n,l),n}}(),d=t(1),s=l(d),g=t(2),f=l(g),c=function(){return Math.log10?Math.log10:function(i){var n=Math.log(i)/Math.LN10;return n=Math.round(1e6*n)/1e6}}(),v={native:{normalize:function(i){return i},index:function(i){return Math.max(0,Math.floor(c(Math.abs(i))/3))},prefix:function(i,n,t){var l=t.sigfigs;return(i/Math.pow(1e3,n)).toPrecision(l)}},"decimal.js":{_requireDecimal:function(n){var l=void 0;return l=i.window&&window.Decimal?window.Decimal:t(3),l.clone(n)},normalize:function(i,n){var t=n.rounding,l=this._requireDecimal({rounding:t});return new l(i)},index:function(i){var n=this._requireDecimal();return i=new n(i),Math.floor(i.e/3)},prefix:function(i,n,t){var l=t.sigfigs,o=t.rounding,r=this._requireDecimal({rounding:o}),e=new r(1e3).pow(n);return new r(i).dividedBy(e).toPrecision(l)}}},p={backend:"native",flavor:"full",suffixGroup:"full",suffixFn:function(i){var n=this.suffixes||this.suffixGroups[this.suffixGroup];if(r(n,"no such suffixgroup: "+this.suffixGroup),i<n.length)return n[i]||""},minSuffix:1e5,minRound:0,sigfigs:3,format:"standard"},q=n.Formats={standard:{suffixGroups:s.default},longScale:{suffixGroups:f.default},scientific:{suffixGroups:{full:[],short:[]}},hybrid:{suffixGroups:{full:s.default.full.slice(0,12),short:s.default.short.slice(0,12)}},engineering:{suffixFn:function(i){return 0===i?"":"E"+3*i}}},m={full:{suffixGroup:"full",sigfigs:5},short:{suffixGroup:"short",sigfigs:3}};p.formats=q,p.flavors=m;var x=n.Formatter=function(){function i(){var n=this,t=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};o(this,i),this.opts=t;for(var l=Object.keys(this._normalizeOpts().flavors),r=0;r<l.length;r++)!function(i){var t=l[i],o="format"+t.charAt(0).toUpperCase()+t.substr(1);n[o]=function(i,l){return n.formatFlavor(i,t,l)}}(r)}return u(i,[{key:"_normalizeOpts",value:function(){var i=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};i=a({},this.opts,i);var n=i&&i.format,t=i&&i.formats||p.formats,l=t[n||p.format];r(l,"no such format: "+n);var o=i&&i.flavor,e=i&&i.flavors||p.flavors,u=e[o||p.flavor];return r(u,"no such flavor: "+o),a({},p,l,u,i)}},{key:"index",value:function(i,n){return n=this._normalizeOpts(n),v[n.backend].index(i)}},{key:"suffix",value:function(i,n){n=this._normalizeOpts(n);var t=v[n.backend].index(i);return n.suffixFn(t)}},{key:"format",value:function(i,n){return n=this._normalizeOpts(n),e(i,n)}},{key:"formatFlavor",value:function(i,n,t){return this.format(i,a({},t,{flavor:n}))}},{key:"listFormats",value:function(i){return i=this._normalizeOpts(i),Object.keys(i.formats)}}]),i}(),D=new x;D.defaultOptions=p,D.Formatter=x,n.default=D;n.format=function(i,n){return D.format(i,n)},n.formatFull=function(i,n){return D.formatFlavor(i,"full",n)},n.formatShort=function(i,n){return D.formatFlavor(i,"short",n)}}).call(n,function(){return this}())},function(i,n){i.exports={short:["","K","M","B","T","Qa","Qi","Sx","Sp","Oc","No","Dc","UDc","DDc","TDc","QaDc","QiDc","SxDc","SpDc","ODc","NDc","Vi","UVi","DVi","TVi","QaVi","QiVi","SxVi","SpVi","OVi","NVi","Tg","UTg","DTg","TTg","QaTg","QiTg","SxTg","SpTg","OTg","NTg","Qd","UQd","DQd","TQd","QaQd","QiQd","SxQd","SpQd","OQd","NQd","Qq","UQq","DQq","TQq","QaQq","QiQq","SxQq","SpQq","OQq","NQq","Sg","USg","DSg","TSg","QaSg","QiSg","SxSg","SpSg","OSg","NSg","St","USt","DSt","TSt","QaSt","QiSt","SxSt","SpSt","OSt","NSt","Og","UOg","DOg","TOg","QaOg","QiOg","SxOg","SpOg","OOg","NOg"],full:[""," Thousand"," Million"," Billion"," Trillion"," Quadrillion"," Quintillion"," Sextillion"," Septillion"," octillion"," nonillion"," decillion"," undecillion"," duodecillion"," tredecillion"," quattuordecillion"," quinquadecillion"," sedecillion"," septendecillion"," octodecillion"," novendecillion"," vigintillion"," unvigintillion"," duovigintillion"," tresvigintillion"," quattuorvigintillion"," quinquavigintillion"," sesvigintillion"," septemvigintillion"," octovigintillion"," novemvigintillion"," trigintillion"," untrigintillion"," duotrigintillion"," trestrigintillion"," quattuortrigintillion"," quinquatrigintillion"," sestrigintillion"," septentrigintillion"," octotrigintillion"," noventrigintillion"," quadragintillion"," unquadragintillion"," duoquadragintillion"," tresquadragintillion"," quattuorquadragintillion"," quinquaquadragintillion"," sesquadragintillion"," septenquadragintillion"," octoquadragintillion"," novenquadragintillion"," quinquagintillion"," unquinquagintillion"," duoquinquagintillion"," tresquinquagintillion"," quattuorquinquagintillion"," quinquaquinquagintillion"," sesquinquagintillion"," septenquinquagintillion"," octoquinquagintillion"," novenquinquagintillion"," sexagintillion"," unsexagintillion"," duosexagintillion"," tresexagintillion"," quattuorsexagintillion"," quinquasexagintillion"," sesexagintillion"," septensexagintillion"," octosexagintillion"," novensexagintillion"," septuagintillion"," unseptuagintillion"," duoseptuagintillion"," treseptuagintillion"," quattuorseptuagintillion"," quinquaseptuagintillion"," seseptuagintillion"," septenseptuagintillion"," octoseptuagintillion"," novenseptuagintillion"," octogintillion"," unoctogintillion"," duooctogintillion"]}},function(i,n){i.exports={short:["","K","M","Md","B","Bd","T","Td","Qa","Qad","Qi","Qid","Sx","Sxd","Sp","Spd","Oc","Od","No","Nd","Dc","Dd","UDc","UDd","DDc","DDd","TDc","TDd","QaDc","QaDd","QiDc","QiDd","SxDc","SxDd","SpDc","SpDd","ODc","ODd","NDc","NDd","Vi","Vd","UVi","UVd","DVi","DVd","TVi","TVd","QaVi","QaVd","QiVi","QiVd","SxVi","SxVd","SpVi","SpVd","OVi","OVd","NVi","NVd","Tg","TD","UTg","UTD","DTg","DTD","TTg","TTD","QaTg","QaTD","QiTg","QiTD","SxTg","SxTD","SpTg","SpTD","OTg","OTD","NTg","NTD","Qd","QD","UQd","UQD","DQd","DQD","TQd","TQD","QaQd","QaQD"],full:[""," thousand"," million"," milliard"," billion"," billiard"," trillion"," trilliard"," quadrillion"," quadrilliard"," quintillion"," quintilliard"," sextillion"," sextilliard"," septillion"," septilliard"," octillion"," octilliard"," nonillion"," nonilliard"," decillion"," decilliard"," undecillion"," undecilliard"," duodecillion"," duodecilliard"," tredecillion"," tredecilliard"," quattuordecillion"," quattuordecilliard"," quinquadecillion"," quinquadecilliard"," sedecillion"," sedecilliard"," septendecillion"," septendecilliard"," octodecillion"," octodecilliard"," novendecillion"," novendecilliard"," vigintillion"," vigintilliard"," unvigintillion"," unvigintilliard"," duovigintillion"," duovigintilliard"," tresvigintillion"," tresvigintilliard"," quattuorvigintillion"," quattuorvigintilliard"," quinquavigintillion"," quinquavigintilliard"," sesvigintillion"," sesvigintilliard"," septemvigintillion"," septemvigintilliard"," octovigintillion"," octovigintilliard"," novemvigintillion"," novemvigintilliard"," trigintillion"," trigintilliard"," untrigintillion"," untrigintilliard"," duotrigintillion"," duotrigintilliard"," trestrigintillion"," trestrigintilliard"," quattuortrigintillion"," quattuortrigintilliard"," quinquatrigintillion"," quinquatrigintilliard"," sestrigintillion"," sestrigintilliard"," septentrigintillion"," septentrigintilliard"," octotrigintillion"," octotrigintilliard"," noventrigintillion"," noventrigintilliard"," quadragintillion"," quadragintilliard"," unquadragintillion"," unquadragintilliard"]}},function(n,t){n.exports=i}])});
+                //# sourceMappingURL=swarm-numberformat.min.js.map
+                
+                // P Studies
+                var studyRequirement = 1000;
+                function pstudy () {
+                        if (VARtotalBomClicks >= studyRequirement) {
+                                VARtestimoniesPerClick ++;
+                                testimonyCount = testimonyCount + (VARtestimoniesPerSecond * 600);
+                                VARtotalBomClicks -= 1000;
+                                document.getElementById("IDtotalBomClicks").innerHTML = numberformat.format (VARtotalBomClicks);
+                                document.getElementById("perClick").innerHTML = numberformat.format (VARtestimoniesPerClick);
+                        }
+                }
+                
+                //game function variables ----------
+                let testimonyCount = 10000;
+                let VARtestimoniesPerClick = 1;
+                let VARtestimoniesPerSecond = 0;
+                let VARtotalBomClicks = 0;
+                let VARtotalTestimonies = 0;
+                let VARhandmadeTestimonies = 0;
+
+                //testimony production output functions
+                function bomClicked () {
+                        testimonyCount = testimonyCount+VARtestimoniesPerClick;
+                        VARtotalBomClicks += 1;
+                        VARtotalTestimonies += VARtestimoniesPerClick;
+                        VARhandmadeTestimonies = VARhandmadeTestimonies + VARtestimoniesPerClick;
+                        document.getElementById("IDtestimonyCounter").innerHTML = numberformat.format (testimonyCount);
+                        document.getElementById("IDhandmadeTestimonies").innerHTML = numberformat.format (VARhandmadeTestimonies);
+                }
+                
+                //game running functions
+                function update() {
+                        updateCPS();
+                        //console.log(VARtestimoniesPerSecond);
+                        updateButtons();
+                        documentEverything();
+                        document.title = numberformat.format (testimonyCount) + " Testimonies - Testimony Clicker";
+                }
+                function CPS() {
+                        testimonyCount = ((testimonyCount * 10) + (VARtestimoniesPerSecond * 10))/10;
+                        VARtotalTestimonies = ((VARtotalTestimonies*10) + (VARtestimoniesPerSecond*10))/10;
+                }
+                function updateCPS() { 
+                        VARtestimoniesPerSecond = 0;
+                        buildingsArray.forEach(building => { 
+                                VARtestimoniesPerSecond += ((building.tps * 10) * (building.numberOfBuildings * 10))/100;
+                                //console.log(`${building.name}` + building.numberOfBuildings);
+                        });
+                        if (VARtestimoniesPerSecond < 1000) {
+                                document.getElementById("IDdisplayTPS").innerHTML = VARtestimoniesPerSecond;
+                        } else {
+                                document.getElementById("IDdisplayTPS").innerHTML = numberformat.format (VARtestimoniesPerSecond);
+                        }
+                }
+                function saveGame () {
+                        var gameSave = {
+                                buildings: buildingsArray.map(building => ({ 
+                                        id: building.id,
+                                        numberOfBuildings: building.numberOfBuildings,
+                                        cost: building.cost,
+                                })),
+                                testimonyCount: testimonyCount,
+                                VARtestimoniesPerClick: VARtestimoniesPerClick,
+                                VARtestimoniesPerSecond: VARtestimoniesPerSecond,
+                                VARtotalBomClicks: VARtotalBomClicks,
+                                VARtotalTestimonies: VARtotalTestimonies,
+                                studyRequirement: studyRequirement,
+                                VARhandmadeTestimonies: VARhandmadeTestimonies
+                        };
+                        localStorage.setItem("gameSave", JSON.stringify(gameSave));
+                }
+                function resetGame() {
+                        if (confirm("Press OK to reset your game. You're an idiot if you do this, but you have your agency. Please ensure that you don't have this game running in any other tabs, or the reset may fail.")) {
+                                var gameSave = {};
+                                localStorage.removeItem('gameSave');
+                                location.reload();
+                        }
+                }
+                function loadGame() {
+                        const savedGame = JSON.parse(localStorage.getItem("gameSave"));
+                                if (typeof savedGame.testimonyCount !== "undefined") testimonyCount = savedGame.testimonyCount;
+                                if (typeof savedGame.VARtestimoniesPerClick !== "undefined") VARtestimoniesPerClick = savedGame.VARtestimoniesPerClick;
+                                //MIGHT NOT NEED THIS IF TPS FUNCTION WORKS BETTER //if (typeof savedGame.VARtestimoniesPerSecond !== "undefined") VARtestimoniesPerSecond = savedGame.VARtestimoniesPerSecond;
+                                if (typeof savedGame.VARtotalBomClicks !== "undefined") VARtotalBomClicks = savedGame.VARtotalBomClicks;
+                                if (typeof savedGame.VARtotalTestimonies !== "undefined") VARtotalTestimonies = savedGame.VARtotalTestimonies;
+                                if (typeof savedGame.studyRequirement !== "undefined") studyRequirement = savedGame.studyRequirement;
+                                if (typeof savedGame.VARhandmadeTestimonies !== "undefined") VARhandmadeTestimonies = savedGame.VARhandmadeTestimonies;
+
+                                savedGame.buildings.forEach(savedBuilding => {
+                                        const building = buildingsArray.find(b => b.id === savedBuilding.id);
+                                        if (building) {
+                                                building.numberOfBuildings = savedBuilding.numberOfBuildings;
+                                                building.cost = savedBuilding.cost;
+                                                console.log(savedBuilding);
+                                                documentEverything();
+                                        }
+                                })
+
+                        documentEverything();
+                }
+                function documentEverything () {
+                        document.getElementById("IDtestimonyCounter").innerHTML = numberformat.format (testimonyCount);
+                        document.getElementById("IDtestimoniesPerClick").innerHTML = VARtestimoniesPerClick;
+                        document.getElementById("IDtotalBomClicks").innerHTML = numberformat.format (VARtotalBomClicks);
+                        document.getElementById("IDtotalTestimonies").innerHTML = numberformat.format (VARtotalTestimonies);
+                        document.getElementById("IDstudyRequirement").innerHTML = numberformat.format (studyRequirement);
+                        if (VARtestimoniesPerSecond < 1000) {
+                        document.getElementById("IDdisplayTPS").innerHTML = VARtestimoniesPerSecond;
+                        } else {
+                        document.getElementById("IDdisplayTPS").innerHTML = numberformat.format (VARtestimoniesPerSecond);
+                        }
+                        document.getElementById("IDhandmadeTestimonies").innerHTML = numberformat.format (VARhandmadeTestimonies);
+                        buildingsArray.forEach(building => {
+                                document.getElementById(building.IDnumberOfBuildings).innerHTML = building.numberOfBuildings;
+                                document.getElementById(building.name).innerHTML = numberformat.format(building.cost);
+                                document.getElementById(building.IDinfoNumberOfBuildings).innerHTML = building.numberOfBuildings;
+                                document.getElementById(building.IDtotalTps).innerHTML = (building.numberOfBuildings * (building.tps * 10)/10);
+                                document.getElementById(building.IDtps).innerHTML = numberformat.format(building.tps);
+                                //console.log("Should have updated number of buildings");
+                        })
+                        document.getElementById("ID1minuteTestimonies").innerHTML = numberformat.format (testimonyCount + (VARtestimoniesPerSecond * 60));
+                        document.getElementById("ID5minuteTestimonies").innerHTML = numberformat.format (testimonyCount + (VARtestimoniesPerSecond * 300));
+                        document.getElementById("ID10minuteTestimonies").innerHTML = numberformat.format (testimonyCount + (VARtestimoniesPerSecond * 600));
+                        document.getElementById("ID15minuteTestimonies").innerHTML = numberformat.format (testimonyCount + (VARtestimoniesPerSecond * 900));
+                        document.getElementById("ID30minuteTestimonies").innerHTML = numberformat.format (testimonyCount + (VARtestimoniesPerSecond * 1800));
+                        document.getElementById("ID1hourTestimonies").innerHTML = numberformat.format (testimonyCount + (VARtestimoniesPerSecond * 3600));
+                        document.getElementById("ID6hourTestimonies").innerHTML = numberformat.format (testimonyCount + (VARtestimoniesPerSecond * 21600));
+                        document.getElementById("ID24hourTestimonies").innerHTML = numberformat.format (testimonyCount + (VARtestimoniesPerSecond * 86400));
+                        console.log("Documented Everything")
+                }
+
+                function updateButtons() {
+                        buildingsArray.forEach(building => {
+                                if (building.cost > testimonyCount) {
+                                        document.getElementById(building.id).classList.add('CLASSdisable');
+                                        //console.log("You cannot afford " + building.name);
+                                } else {
+                                        document.getElementById(building.id).classList.remove('CLASSdisable');
+                                }
+                        })
+                }
+
+                window.onload = function () {
+                        loadGame();
+                }
+
+                setInterval(update, 50);
+                setInterval(CPS, 1000);
+                setInterval(saveGame, 60000);
+                
+                </script>
+                
+        </body>
+        </main>
+        </center>
+</html>
