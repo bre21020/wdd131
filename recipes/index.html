@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <link rel="icon" href="favicon.ico">
+    <!-- <link rel="stylesheet" href="styles.css">
+    <!-- <script src="script.js" defer></script> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        header {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 50px;
+    align-items: center;
+    font-family: 'Amatic SC', sans-serif;
+}
+
+header {
+    width: 100%;
+}
+
+header img {
+    width: 10rem;
+    height: 10rem;
+}
+
+hr {
+    border: 2px solid gray;
+    width: 50%;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+/*-----------------------------*/
+
+.externalLinks {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin: 25px;
+}
+
+.recipeCard {
+    width: 50%;
+    border: 2px solid black;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.recipeCard img {
+    width: 250px;
+    height: 180px;
+    padding: 15px;
+    display: block;
+}
+
+.recipeCardInfo {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: flex-start;
+}
+
+.recipeName {
+    font-family: 'Amatic SC', sans-serif;
+    color: lightblue;
+    font-size: 50px;
+    padding: 0px;
+}
+
+.searchBar {
+    width: 50%;
+    border: 2px solid black;
+    height: 50px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.searchBar input {
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 90%;
+    font-size: 35px;
+}
+
+.searchBar img {
+    height: 90%;
+    padding-left: 2%;
+    border-left: solid 1px black;
+}
+
+.social img {
+    width: 40px;
+    height: 40px;
+}
+
+.tag {
+    border: 1px solid black;
+    background-color: gray;
+    padding: 2px;
+    align-self: flex-start;
+}
+
+@media (max-width: 750px) {
+    .desc {
+        display: none;
+    }
+}
+    </style>
+
+</head>
+<body>
+    <header>
+        <img src="images/recipe-book.png">
+        <h1>RecipeBook</h1>
+    </header>
+    <main>
+        <div class="searchBar">
+            <input type="text" placeholder="Find a recipe">
+            <img src="images/search.svg" onclick="console.log('tfffLfttffffffLLffffttttttttttt1tfffffffffftttttt111111tffffffffftttff\nfttfffttfffffffffttfftttttt1t1tt11tfffffftttttt111t111111ttffffLLffttf\nLfttttffLLLfttttftfLftttttttffffttttffffttttfftt11t111tt111ttfffLffttf\nLLffttfLLffttfffftfLfttttttffttt11111ttttffffffftt1111tft11111ttfffftt\nLLLfftffttttffLffftfftttttft1i,,::::,iitffffffffftt111tft1tttt1ttffLft\nLLLfttttffftffffftfttttttff1:,,,,,,,,::itfffffffft11111111ttttttttttt1\nLLLfttfftffffffffLLLftttttt,::,:::,,,,::1tfffftfft11111ttt1ttt1tfttt11\nLffftfLfffttfLLffLLLfttttti,,,iii11111,:i11ttffft111111tfft11t11tt1ttt\nfttttfffffttLLLLfLLLftttfti:,,,iiiiiiii,it111tt111t1111tffttfftt11ttft\nttttttttttttfLLLffLLfttttt1,,,,,,iiiiii,1tft11tt1111111tfftffffttttttt\nffffffffttffttLLfffLfttttt11i,,,,iiiiiii1tt11tfftt11111ttt1fffttt1tttt\nffffffffttffftffttftttttff1ii,,,,iii1iii111tt1ttttt1111t111ffttffttfff\nfffffffttttttttttffftttttft1ii,,,ii1iii111tfft11ttt111111t1tt1tfft1ttf\nfffffftttttttt11fffftttt1t111iiii,iiiii11ttffft11111111ttttttt1tt11ttf\nfttttttttffttt11tffttttttt11ttii,,,iiii11i1ffftt1111111tttt111tttt11tt\ntttttttfffftttt11tfftttttt111t1i,,,iiii1i,,:,i1111t1111ttt111t1tfftt11\nfffftttffffttffttttft111tt11111i,,,iiii1,,,....,:::,i11tt111tt11tffftt\nffffttttfffttffttttft1111111111,,,,,,,it,,...........,:it111ttt1tffftt\nffft111tffttfttttttt1111t1i,:,11i1i,,1t1:,,............,itt11tt1tfftt1\nttt1ttt11ttttttftt111111i:,..:1111iii11,,...............,tt111t11ttttt\nttttffftt111ttffftt11i,,.,...,iiii,,,,:,,...............:1ttt1111ttfff\n11ttttttttttfffffft1:,..........::::::,,,...............,1ttttt11ttfff\n11ttttttttttfffffft1:...........:,::,:..................,1tttttt1ttfff\n1ttftttfftttttffft11:...........,:::::..................,1tttft11tffff\n1tttttttttttttttttt1,...........,::::,...................,t1t1111tffff\n1tttttttt1tfftttttt1:...........,::::,...... ............,1111tt11ffff\n1tttttttt1tffftttft1:...........,:::,,....................it1ttt11tfff\n1ttttttttttffttttttt:...........,::,,.....................:111tt11tttt\n1tftttttftttttttttt1,,:,:.......,:,,,....................,,1111t11tttt\n1ttffffffttttfffft11ii1i:.......,:,,,.....................,1tt1111tttt\n1tttttttttttttttttti,,,,:.......,:,,,....... .............,itt1111tttt\n1111111ttttttttttt1i,,,,:.......,:,,,......................itt11111111\n1111111ttttttttttt1,,,,,:...... ,:,,,,.....................itt11t11111\n1111111tttttttttt1,:,::,,...... ,:...,.....................ittttt11111\n111111111tttttttt1i,.....  .... .:........................,i1tttt11111\n1111111111t11t11111,,....,,.... ,:::,,,...................,11ttttt11t1\n\n')">
+        </div>
+        <br>
+        <hr>
+        <br>
+        <div class="recipeCard">
+            <div>
+                <img src="images/apple-crisp.jpg">
+            </div>
+            <div class="recipeCardInfo">
+                <div class="tag">
+                    Desert
+                </div>
+                <p class="recipeName">Apple Crisp</p>
+                <p class="desc">This apple crisp recipe is like really super cool so you should make it. the recipe is burried somewhere in my life story, you'll have to scroll for about 3 minutes at max speed before you find it.</p>
+                <span class="rating" role="img" aria-label="Rating: 4 out of 5 stars">
+                  <span aria-hidden="true" class="icon-star">⭐</span>
+                  <span aria-hidden="true" class="icon-star">⭐</span>
+                  <span aria-hidden="true" class="icon-star">⭐</span>
+                  <span aria-hidden="true" class="icon-star">⭐</span>
+                  <span aria-hidden="true" class="icon-star-empty">☆</span>
+                </span>
+            </div>
+        </div>
+        <br>
+        <div class="externalLinks">
+            <div class="social">
+                <!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates  -->
+                <a href="https://www.flaticon.com/free-icons/recipe" title="recipe icons">Recipe icons created by Freepik - Flaticon</a>
+            </div>
+            <div class="social">
+                <a href="#"><img src="images/instagram_icon.svg" alt="instagram icon"></a>
+                <a href="#"><img src="images/youtube_icon.svg" alt="youtube icon"></a>
+                <a href="#"><img src="images/pinterest_icon.svg" alt="pinterest icon"></a>
+            </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        
+    </footer>
+</body>
+</html>
+
+
+
+<!-- Open Graph (Facebook, LinkedIn, etc.) -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Your Title">
+<meta property="og:description" content="Your Description">
+<meta property="og:url" content="Your URL">
+<meta property="og:image" content="social-preview-image.png">
+
+<!-- X Card -->
+<meta name="twitter:card" content="Social Preview Image">
+<meta name="twitter:title" content="Your Title">
+<meta name="twitter:description" content="Your Description">
+<meta name="twitter:image" content="social-preview-image.png">
+
+<!-- One favicon (ICO works everywhere) -->
+<link rel="icon" href="favicon.ico">
+
+<!-- One Apple Touch Icon (iOS home screen) -->
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+
+    
