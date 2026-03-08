@@ -30,28 +30,42 @@ main {
 
 /*-----------------------------*/
 
+.externalLinks {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin: 25px;
+}
+
 .recipeCard {
     width: 50%;
     border: 2px solid black;
     border-radius: 5px;
     display: flex;
     flex-wrap: wrap;
+    align-items: flex-start;
 }
 
 .recipeCard img {
     width: 250px;
     height: 180px;
     padding: 15px;
+    display: block;
 }
 
 .recipeCardInfo {
+    padding: 5px;
     display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: flex-start;
 }
 
 .recipeName {
     font-family: 'Amatic SC', sans-serif;
     color: lightblue;
-    font-size: 30px;
+    font-size: 50px;
+    padding: 0px;
 }
 
 .searchBar {
@@ -87,4 +101,11 @@ main {
     border: 1px solid black;
     background-color: gray;
     padding: 2px;
+    align-self: flex-start;
+}
+
+@media (max-width: 750px) {
+    .desc {
+        display: none;
+    }
 }
