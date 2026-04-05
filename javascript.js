@@ -3,7 +3,7 @@
 function recipeTemplate(card) {
     return `
     <div class="artCard">
-        <img src="${card.imgSrc}" class="previewImage" loading="lazy" alt="${card.title}">
+        <img src="${card.imgSrc}" class="previewImage" loading="lazy" alt="${card.title}" width="200" height="200">
         <div class="artCardInfo">
             <h1>${card.title}</h1>
             <p>${card.description}</p>
@@ -15,7 +15,7 @@ function recipeTemplate(card) {
 function projectTemplate(card) {
     return `
     <div class="artCard">
-        <img src="${card.imgSrc}" class="previewImage" alt="${card.alt}" loading="lazy">
+        <img src="${card.imgSrc}" alt="${card.alt}" loading="lazy" width="200" height="200">
         <div class="artCardInfo">
             <h1>${card.title}</h1>
             <p>${card.description}</p>
@@ -45,7 +45,7 @@ const artCards = [
     {
         title: "The Legend",
         imgSrc: "images/theLegend-v2-sm.jpg",
-        description: "From the videogame Deltarune, there is a story told to the player at the beginning of the game, called 'The Legend'. This story is a prophecy that fortells the main character's appearance and roles as heros in saving the world they are from, as well as the worlds the find themselves falling into. The three heroes are foretold to be a human, a monster, and a prince from the dark.",
+        description: "From the videogame Deltarune, there is a story told to the player at the beginning of the game, called 'The Legend'. This story is a prophecy that foretells the main character's appearance and roles as heros in saving the world they are from, as well as the worlds the find themselves falling into. The three heroes are foretold to be a human, a monster, and a prince from the dark.",
         alt: "The 3 Heroes of Legend from Deltarune"
     },
     {
